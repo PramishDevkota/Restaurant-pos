@@ -42,19 +42,47 @@ menu = {
 }
 
 # Greet
-print("🌆 Welcome to Phantom Cafe – Rooftop Experience 🌆")
+print(" -------------------- Welcome to Phantom Cafe Rooftop Experience -------------------- ")
 
-print("\n--- Breakfast ---")
-print("English_Breakfast Rs550\nPancake_with_Honey Rs320\nFrench_Toast Rs300\nOmelette_Plain Rs220\nOmelette_Cheese Rs280\nAloo_Paratha Rs300\nGranola_Yogurt Rs350")
+print("\n -------------------- BREAKFAST -------------------- ")
 
-print("\n--- Lunch / Dinner ---")
-print("Veg_Momo Rs260\nChicken_Momo Rs320\nVeg_Chowmein Rs280\nChicken_Chowmein Rs340\nVeg_Pizza Rs650\nChicken_Pizza Rs750\nVeg_Pasta Rs520\n Chicken_Pasta Rs620 | Dal_Bhat_Set Rs480")
+print("English Breakfast      Rs550")
+print("Pancake with Honey     Rs320")
+print("French Toast           Rs300")
+print("Omelette Plain         Rs220")
+print("Omelette Cheese        Rs280")
+print("Aloo Paratha           Rs300")
+print("Granola Yogurt         Rs350")
 
-print("\n--- Snacks ---")
-print("French_Fries Rs260\nGrilled_Sandwich Rs350\nVeg_Burger Rs420\nChicken_Burger Rs480\nChicken_Wings Rs520\nNachos Rs450")
+print("\n --------------------  LUNCH / DINNER -------------------- ")
+print("Veg Momo               Rs260")
+print("Chicken Momo           Rs320")
+print("Veg Chowmein           Rs280")
+print("Chicken Chowmein       Rs340")
+print("Veg Pizza              Rs650")
+print("Chicken Pizza          Rs750")
+print("Veg Pasta              Rs520")
+print("Chicken Pasta          Rs620")
+print("Dal Bhat Set           Rs480")
 
-print("\n--- Drinks ---")
-print("Masala_Tea Rs90\nMilk_Tea Rs100\nBlack_Coffee Rs160\nCappuccino Rs220\nLatte Rs240\nCold_Coffee Rs280\nFresh_Lemon_Soda Rs220\nOrange_Juice Rs260")
+print("\n --------------------  SNACKS -------------------- ")
+print("French Fries           Rs260")
+print("Grilled Sandwich       Rs350")
+print("Veg Burger             Rs420")
+print("Chicken Burger         Rs480")
+print("Chicken Wings          Rs520")
+print("Nachos                 Rs450")
+
+print("\n --------------------  DRINKS -------------------- ")
+print("Masala Tea             Rs90")
+print("Milk Tea               Rs100")
+print("Black Coffee           Rs160")
+print("Cappuccino             Rs220")
+print("Latte                  Rs240")
+print("Cold Coffee            Rs280")
+print("Fresh Lemon Soda       Rs220")
+print("Orange Juice           Rs260")
+
 
 order_total = 0
 ordered_items = []
@@ -74,7 +102,7 @@ while True:
 
     if another.lower() == "no":
         break
-print("\n################ TOTAL BILL ################  ")
+print("\n ------------------------------- TOTAL BILL -------------------------------  ")
 
 for food in ordered_items:
     print(f"{food} - Rs{menu[food]}")
