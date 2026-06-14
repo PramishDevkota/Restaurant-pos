@@ -55,22 +55,51 @@ print("French_Fries Rs260\nGrilled_Sandwich Rs350\nVeg_Burger Rs420\nChicken_Bur
 
 print("\n--- Drinks ---")
 print("Masala_Tea Rs90\nMilk_Tea Rs100\nBlack_Coffee Rs160\nCappuccino Rs220\nLatte Rs240\nCold_Coffee Rs280\nFresh_Lemon_Soda Rs220\nOrange_Juice Rs260")
+
 order_total = 0
+ordered_items = []
 
-item_1 = input("Enter the name of item you want to order = ")
-if item_1 in menu:
-    order_total += menu [item_1]
-    print("Your item {item_1} has been added to your order")
+while True:
+    item = input("Enter the name of item you want to order = ")
 
-else:
-    print(f"Ordered item [item_1] currently unavailable. Please order something esle we can serve you")
-
-another_order = input("Do you want to add another item in your order list? (Yes/No) ")
-if another_order == "Yes":
-    item_2 = input("Enter the name of the second item = ")
-    if item_2 in menu:
-        order_total += menu [item_2]
-        print(f"item {item_2} has been added to your order list")
+    if item in menu:
+        ordered_items.append(item)
+        order_total += menu[item]
+        print(f"{item} added to you order. Order will take 5/10 minutes to arrive")
+    
     else:
-        print(f"Ordered item {item_2} is not available!")
-print(f"The total amount of items to pay is {order_total}  ")
+        print("The item that you ordered is not available")
+
+    another = input("Do you want to order another item? (Yes/NO)")
+
+    if another.lower() == "no":
+        break
+print("\n################ TOTAL BILL ################  ")
+
+for food in ordered_items:
+    print(f"{food} - Rs{menu[food]}")
+
+
+print(f"\nTotal Amount = Rs{order_total}")
+
+
+
+
+
+# item_1 = input("Enter the name of item you want to order = ")
+# if item_1 in menu:
+#     order_total += menu [item_1]
+#     print("Your item {item_1} has been added to your order")
+
+# else:
+#     print(f"Ordered item [item_1] currently unavailable. Please order something esle we can serve you")
+
+# another_order = input("Do you want to add another item in your order list? (Yes/No) ")
+# if another_order == "Yes":
+#     item_2 = input("Enter the name of the second item = ")
+#     if item_2 in menu:
+#         order_total += menu [item_2]
+#         print(f"item {item_2} has been added to your order list")
+#     else:
+#         print(f"Ordered item {item_2} is not available!")
+# print(f"The total amount of items to pay is {order_total}  ")
